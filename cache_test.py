@@ -11,6 +11,7 @@ req_url = "https://jsonplaceholder.typicode.com/todos?userId=10&completed=true"
 
 
 @cache_decorator.cached
+@cache_decorator.invalidate_cached
 def get_deals(req_url: str):
     response = requests.get(req_url)
     todos = json.loads(response.text)
