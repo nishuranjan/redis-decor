@@ -5,14 +5,10 @@ import json
 
 
 cache = redis.Redis(
-        host='redis-18767.c17.us-east-1-4.ec2.cloud.redislabs.com',
-        port=18767,
-        password='pRPbp9UXd4bkPvOKvrNKJJxgSPSLqNIS'
+        host='<redis endpoint>',
+        port=<redis port>,
+        password='<enter ur redis password>'
     )
-
-# cache key from request url
-# https://admin.dev.placeexchange.com/api/v3/orgs/880940e1-5c71-4f1f-82eb-eab9ec8bb23a/deals/Ar_testDeal
-# https://admin.dev.placeexchange.com/api/v3/deals/7f4c8e61-2a9b-4dd5-9ec7-ef82c1ad24e9
 
 
 def test_redis():
