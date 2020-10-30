@@ -46,15 +46,3 @@ def generate_cache_key(fn, *args):
     key_parts = [fn.__name__] + list(args)
     key = '-'.join(key_parts)
     return key
-
-
-def memoize(fn):
-    """
-    memoize the cache
-    """
-    def inner(n):
-        if n not in cache:
-            cache[n] = fn(n)
-        return cache[n]
-
-    return inner
